@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FireForum｜註冊或登入</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    const config = {
+        apiKey: "AIzaSyDkqS1ZfCbS6IbvDP3hu2HdOfYD0LfnHE8",
+        authDomain: "fir-practice-b6076.firebaseapp.com",
+        databaseURL: "https://fir-practice-b6076.firebaseio.com",
+        projectId: "fir-practice-b6076",
+        storageBucket: "fir-practice-b6076.appspot.com",
+        messagingSenderId: "871309300393"
+    };
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+</script>
+<body>
+    <main>
+        <form id="signUpWrap">
+            <h3>註冊</h3>
+            <p>Email</p>
+            <input id="signUpEmail" type="text">
+            <p>設定密碼</p>
+            <input id="signUpPw" type="text">
+            <p>暱稱</p>
+            <input id="signUpName" type="text">
+            <button id="signUpBtn" type="submit">註冊</button>
+        </form>
+        <form id="signInWrap">
+            <h3>登入／登出</h3>
+            <p>Email</p>
+            <input id="signInEmail" type="text">
+            <p>密碼</p>
+            <input id="signInPw" type="text">
+            <button id="signInBtn" type="submit">登入</button>
+            <button id="signOutBtn" type="submit">登出</button>
+        </form>
+        <div id="afterSignIn">
+            <form id="postArticleWrap">
+                <h3>發新文章</h3>
+                <p>標題</p>
+                <input name="articleTitle" type="text">
+                <p>文章類別</p>
+                <select id="articleTag">
+                    <option selected value="Beauty">Beauty</option>
+                    <option value="Gossiping">Gossiping</option>
+                    <option value="Joke">Joke</option>
+                    <option value="SchoolLife">SchoolLife</option>
+                </select>
+                <p>內容</p>
+                <textarea name="articleContent" cols="30" rows="10"></textarea>
+                <button id="postBtn" type="submit">送出</button>
+            </form>
+            <form id="searchUserWrap">
+                <h3>搜尋 User（輸入 email）</h3>
+                <input name="searchUserEmail" type="text">
+                <button id="searchUserBtn" type="submit">搜尋 User</button>
+                <div id="showUser"></div>
+            </form>
+            <form id="searchTagWrap">
+                <h3>搜尋特定 Tag 全部文章</h3>
+                <select id="searchTag">
+                    <option selected value="Beauty">Beauty</option>
+                    <option value="Gossiping">Gossiping</option>
+                    <option value="Joke">Joke</option>
+                    <option value="SchoolLife">SchoolLife</option>
+                </select>
+                <button id="searchTagBtn">搜尋 Tag</button>
+            </form>
+            <form id="searchFriendWrap">
+                <h3>搜尋特定好友全部文章／<br>特定好友特定 Tag 文章</h3>
+                <input name="searchFriend" type="text"><br>
+                <select id="searchFriendTag">
+                    <option selected value="All">好友的全部文章</option>
+                    <option value="Beauty">Beauty</option>
+                    <option value="Gossiping">Gossiping</option>
+                    <option value="Joke">Joke</option>
+                    <option value="SchoolLife">SchoolLife</option>
+                </select>
+                <button id="searchFriendBtn">搜尋特定</button>
+            </form>
+        </div>
+    </main>
+    <script src="./app.js"></script>
+</body>
+</html>

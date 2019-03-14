@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Yu Gothic", "Meiryo";
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-flow: row wrap;
+}
+
+#afterSignIn {
+    flex: 1 0 auto;
+    flex-flow: row wrap;
+}
+
+#signUpWrap, #signInWrap, #postArticleWrap, 
+#searchUserWrap, #searchTagWrap, #searchFriendWrap {
+    border: 1px solid silver;
+}
