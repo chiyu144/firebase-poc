@@ -1,4 +1,4 @@
-#### Firebase Task 2019
+#### Firebase Task
 
 - AppWorks School 2019 spring web class (front-end) assigned task
 - This repository is no longer maintained, no live demo is available
