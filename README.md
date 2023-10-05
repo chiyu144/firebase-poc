@@ -1,11 +1,8 @@
 #### Firebase POC
 
 - AppWorks School 2019 spring web class (front-end) assigned task.
+- Implemented a proof of concept for handling friend requests using Firebase, collaborating with my fellow iOS and Android trainees in 2 days.
 - This repository is no longer maintained, no live demo is available.
-
-#### Task Content
-
-- I collaborated with iOS and Android trainees, built a simple website that can handle basic friend requests with Google Firebase in 2 days.
 
 #### Front-end Tech Stack
 
