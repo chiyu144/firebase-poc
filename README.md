@@ -7,4 +7,4 @@
 - HTML 5 + CSS 3 + Vanilla JavaScript
 
 #### Cloud Tech Stack
-- Google Firebase
+- Google Firebase (Firestore, Authentication)
